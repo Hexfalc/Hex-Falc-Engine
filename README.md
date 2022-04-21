@@ -3,7 +3,7 @@ A modified version of psych engine,originally named simply costum engine maded w
 , now using psych 0.5.2h
 ## Credits
 
-HexFalc(Me) - Modifing the Engine
+HexFalc(Me) - Modifing the Psych Engine
 
 Saw (Ma Jigsaw) - Original Psych Engine Android Support
 
