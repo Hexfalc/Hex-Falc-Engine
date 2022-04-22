@@ -78,6 +78,13 @@ class MainMenuState extends MusicBeatState
 		bg.screenCenter();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
+		
+		var bgScroll:FlxBackdrop = new FlxBackdrop(Paths.image('menushit'), 5, 5, true, true, -33, -32);
+		bgScroll.scrollFactor.set();
+		bgScroll.screenCenter();
+		bgScroll.velocity.set(50, 50);
+		bgScroll.antialiasing = ClientPrefs.globalAntialiasing;
+		add(bgScroll);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		camFollowPos = new FlxObject(0, 0, 1, 1);
@@ -128,7 +135,7 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollowPos, null, 1);
 
-    var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Hex-Falc-Engine By HexFalc" + psychEngineVersion, 12);
+    var versionShit:FlxText = new FlxText(12, FlxG.height - 62, 0, "Hex-Falc-Engine By HexFalc" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("VCR OSD Mono", 16, FlxColor.BLUE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
