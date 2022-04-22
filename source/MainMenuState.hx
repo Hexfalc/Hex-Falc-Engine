@@ -79,7 +79,7 @@ class MainMenuState extends MusicBeatState
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
 		
-		var bgScroll:FlxBackdrop = new FlxBackdrop(Paths.image('menushit'), 5, 5, true, true, -33, -32);
+		var bgScroll:FlxBackdrop = new FlxSprite(Paths.image('menushit'), 5, 5, true, true, -33, -32);
 		bgScroll.scrollFactor.set();
 		bgScroll.screenCenter();
 		bgScroll.velocity.set(50, 50);
