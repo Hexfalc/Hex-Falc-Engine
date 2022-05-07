@@ -1042,7 +1042,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 		
-		watermark = new FlxText(scoreTxt.x + 50, scoreTxt.y + 20, 0, "FNF | Hex Falc Engine (Psych 0.5.2)", 15);
+		watermark = new FlxText(scoreTxt.x + 70, scoreTxt.y + 40, 0, "FNF | Hex Falc Engine (Psych 0.5.2)", 15);
 		watermark.scrollFactor.set();
 		watermark.borderSize = 1.25;
 		watermark.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
