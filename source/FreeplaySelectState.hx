@@ -5,7 +5,7 @@ import flixel.FlxSprite;
 import flixel.FlxG;
 
 class FreeplaySelectState extends MusicBeatState{
-    var freeplayCats:Array<String> = ['Vanilla', 'Tutorials'];
+    var freeplayCats:Array<String> = ['Normal Game', 'Extras'];
 	var grpCats:FlxTypedGroup<Alphabet>;
 	var curSelected:Int = 0;
 	var BG:FlxSprite;
@@ -20,10 +20,14 @@ class FreeplaySelectState extends MusicBeatState{
         {
 			var catsText:Alphabet = new Alphabet(0, (70 * i) + 30, freeplayCats[i], true, false);
             catsText.targetY = i;
-            catsText.isMenuItem = true;
+            catsText.isMenuItemCenter = true;
 			grpCats.add(catsText);
 		}
         changeSelection();
+        
+        #if android
+        addVirtualPad(UP_DOWN, A_B);
+            #end
         super.create();
     }
 
